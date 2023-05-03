@@ -7,7 +7,7 @@ const auth = require("./routes/auth");
 const user = require("./routes/user");
 const product = require("./routes/product");
 const upload = require("./routes/upload");
-const payment = require("./routes/payment");
+
 
 dotenv.config({
     origin: 'https://fluffy-blancmange-e9fcc0.netlify.app',
@@ -26,9 +26,9 @@ app.use("/api/auth" , auth);
 app.use("/api/user" , user);
 app.use("/api/product" , product);
 app.use("/api/upload" , upload);
-app.use("/api/create-checkout-session" , payment);
 
-const port = process.env.PORT || "5001";
+
+const port = process.env.PORT || 5001;
 
 const startServer = async () => {
     try {
