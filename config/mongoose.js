@@ -1,14 +1,12 @@
 const mongoose = require("mongoose");
-
-const pcuri = "mongodb://127.0.0.1:27017/Eommerce_DB";
+ 
+const url = process.env.MONGO_URI;
+console.log("i am " , url);
 const connectDb = async () => {
   try {
     mongoose.set("strictQuery", false);
-    mongoose.connect(
-      pcuri,
-      {
-        useNewUrlParser: true,
-      }
+    await mongoose.connect(
+      url
     );
     console.log("Connected to DB Successfully");
   } catch (error) {
