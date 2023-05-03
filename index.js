@@ -10,7 +10,7 @@ const upload = require("./routes/upload");
 
 
 dotenv.config({
-    origin: 'https://fluffy-blancmange-e9fcc0.netlify.app',
+    origin: 'https://comforting-vacherin-c0f470.netlify.app',
     credentials: true
 });
 
